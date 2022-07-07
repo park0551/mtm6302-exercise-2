@@ -1,0 +1,119 @@
+/* imported font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css reset referenced from https://meyerweb.com/eric/tools/css/reset/ */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: inherit;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* --------------------beginning of custom styles -------------------*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+  font-weight: 600;
+}
+
+.container {
+  padding: 10px;
+  position: relative;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+#gallery > * {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  object-position: top;
+}
+
+.galleryImg {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.galleryImg:hover {
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 0.5);
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* display: flex; */
+  grid-gap: 10px;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000aa; */
+}
+
+.show{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000aa;
+}
+/* popup.show class to show display:flex on click */
+
+#popup__caption {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+#popup img {
+  height: 90vh;
+}
+#clickedImage {
+  max-height: 100%;
+}
